@@ -84,9 +84,9 @@ export default {
                 })
           },
           (err) => {
-              if (!this.email) {
+              if (this.email < 8) {
               this.errorMessage = "Por favor digite seu e-mail";
-            } else if (this.senha && !this.senha) {
+            } else if (this.senha < 6) {
               this.errorMessage = "Por favor digite sua senha";
             } else{
                 this.errorMessage = "Seu e-mail e/ou senha estão incorretos";
