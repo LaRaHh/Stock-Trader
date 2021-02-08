@@ -84,14 +84,8 @@ export default {
                 })
           },
           (err) => {
-              if (this.email < 8) {
-              this.errorMessage = "Por favor digite seu e-mail";
-            } else if (this.senha < 6) {
-              this.errorMessage = "Por favor digite sua senha";
-            } else{
-                this.errorMessage = "Seu e-mail e/ou senha estão incorretos";
-            }
-                this.$toast.error("Ocorreu um erro: " + this.errorMessage, {
+              
+                this.$toast.error("Ocorreu um erro: " + err.message, {
                     position: "top-right",
                     timeout: 5000,
                     closeOnClick: true,

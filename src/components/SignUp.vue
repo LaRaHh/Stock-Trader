@@ -78,14 +78,7 @@ export default {
             this.$router.replace("/home");
           },
           (err) => {
-            if (!this.email) {
-              this.errorMessage = "Por favor digite seu e-mail";
-            } else if (this.senha && !this.senha) {
-              this.errorMessage = "Por favor digite sua senha";
-            } else{
-                this.errorMessage = "Uma conta já existe com esse e-mail";
-            }
-            this.$toast.error("Ocorreu um erro: " + this.errorMessage, {
+            this.$toast.error("Ocorreu um erro: " + err.message, {
               position: "top-right",
               timeout: 5000,
               closeOnClick: true,
