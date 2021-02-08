@@ -1,6 +1,6 @@
 # stock-trader
 
-##Description
+## Description
 
 This app is about sell and buy some stocks, you can save your progress and check if your stocks are rising or declining.
 
